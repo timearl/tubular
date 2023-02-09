@@ -1,0 +1,13 @@
+Package: tubular
+Type: Package
+Title: Colours from the London Underground map
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: Tim Earl <timothyjearl@gmail.com>
+Description: Provides colours from the London Underground map
+Imports:
+    ggplot2
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
