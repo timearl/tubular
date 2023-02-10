@@ -15,7 +15,8 @@
 
 #' TubeColours
 #'
-#' @param extended (FALSE) additionally return non-tube lines on the underground map
+#' @param extended (FALSE) additionally return non-tube lines on the underground map taken from
+#' https://blog.tfl.gov.uk/2022/12/22/digital-colour-standard/
 #'
 #' @return A dataframe of colour values and line names
 #'
@@ -31,7 +32,7 @@ TubeColours <- function(extended=FALSE) {
             "Jubilee", "Victoria", "Waterloo & City")
 
    if(extended){
-     tubular <- c(tubular, "#9364CD", "#00A4A7", "#EE7C0E","#84B817","#E21836")
+     tubular <- c(tubular, "#60399E", "#00AFAD", "#FA7B05","#5FB526","#DC241F")
      names <- c(names, "Elizabeth", "Docklands Light Railway", "London Overground", "London Trams", "Cable Car")
    }
 
