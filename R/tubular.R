@@ -57,3 +57,21 @@ PlotTubecolours <- function(extended=FALSE){
     ggplot2::geom_label(x=0.5) +
     ggplot2::theme_void()
 }
+
+
+##ggplot(diamonds[1:1000,], aes(x=carat, y=price, col=cut)) + geom_point() + scale_colour_tube()
+
+scale_colour_tube <- function(..., alpha = 1, aesthetics = "colour"){
+  discrete_scale(aesthetics, "tube", tube_pal(alpha), ...)
+}
+
+tube_pal <- function(alpha=1){
+  cols <- alpha(TubeColours()$col)
+  function(n) {if (n>length(cols)) stop("Too many colours requested for tube palette"); cols[seq_len(n)]}
+}
+
+
+scale_fill_tube <- function(..., alpha = 1, aesthetics = "fill"){
+  discrete_scale(aesthetics, "tube", tube_pal(alpha), ...)
+}
+
